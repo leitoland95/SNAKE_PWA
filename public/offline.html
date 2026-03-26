@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Neon Snake — Offline</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <main class="offline">
+    <h1>Neon Snake</h1>
+    <p>Estás en modo offline. La versión local del juego está disponible.</p>
+    <p>Si la APK incluye los archivos, toca "Jugar" para iniciar.</p>
+    <button id="startOffline" class="btn">Jugar Offline</button>
+  </main>
+
+  <script type="module">
+    import init from '/index.js';
+    document.getElementById('startOffline').addEventListener('click', ()=> {
+      // Cargar la misma lógica del juego desde index.js
+      location.href = '/index.html';
+    });
+  </script>
+</body>
+</html>
