@@ -1,0 +1,14 @@
+{
+  "name": "snake-pwa",
+  "version": "1.0.0",
+  "description": "Snake futurista PWA - listo para Render y empaquetado en APK",
+  "scripts": {
+    "start": "npx serve public -l 3000",
+    "build": "echo \"No build step required; static site in public/\""
+  },
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^14.2.0"
+  }
+}
