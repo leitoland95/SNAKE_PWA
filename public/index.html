@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Neon Snake — Futuristic Snake</title>
+
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#0f1724" />
+  <link rel="icon" href="/icons/icon-192.svg" />
+
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="hud">
+      <div class="left">
+        <div class="stat">Vidas: <span id="lives">3</span></div>
+        <div class="stat">Puntos: <span id="score">0</span></div>
+      </div>
+      <div class="center">
+        <h1 class="title">NEON SNAKE</h1>
+      </div>
+      <div class="right">
+        <div class="stat">Tiempo: <span id="time">00:00</span></div>
+        <div class="stat">Record: <span id="best">0</span></div>
+      </div>
+    </header>
+
+    <main class="game-area">
+      <canvas id="gameCanvas" width="720" height="720" aria-label="Canvas del juego Snake"></canvas>
+      <div class="overlay" id="overlay">
+        <div class="panel">
+          <h2 id="overlay-title">Pulsa para jugar</h2>
+          <p id="overlay-sub">Toca o presiona espacio para iniciar</p>
+          <button id="startBtn" class="btn">Jugar</button>
+          <button id="resumeBtn" class="btn hidden">Reanudar</button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="controls">
+      <div class="control-grid">
+        <button id="up" class="dir">▲</button>
+        <div class="middle">
+          <button id="left" class="dir">◀</button>
+          <button id="right" class="dir">▶</button>
+        </div>
+        <button id="down" class="dir">▼</button>
+      </div>
+      <div class="small-controls">
+        <button id="pauseBtn" class="btn small">Pausa</button>
+        <button id="resetBtn" class="btn small">Reiniciar</button>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="/index.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js').catch(()=>{});
+    }
+  </script>
+</body>
+</html>
