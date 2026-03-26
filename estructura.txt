@@ -1,0 +1,29 @@
+snake-pwa/
+├─ public/
+│  ├─ index.html
+│  ├─ offline.html
+│  ├─ manifest.json
+│  ├─ service-worker.js
+│  ├─ icons/
+│  │  ├─ icon-512.svg
+│  │  ├─ icon-192.svg
+│  │  ├─ icon-144.png
+│  │  ├─ icon-96.png
+│  │  ├─ icon-72.png
+│  │  └─ splash.svg
+│  └─ assets/
+│     └─ fonts/
+├─ src/
+│  ├─ css/
+│  │  └─ styles.css
+│  ├─ js/
+│  │  ├─ game.js
+│  │  └─ ui.js
+│  └─ index.js
+├─ Dockerfile
+├─ package.json
+├─ README.md
+├─ .gitignore
+└─ android/
+   ├─ AndroidManifest.xml
+   └─ MainActivity.java
