@@ -1,0 +1,105 @@
+:root{
+  --bg:#071026;
+  --panel:#071a2a;
+  --neon:#00f0ff;
+  --accent:#7c3aed;
+  --muted:#9aa7b2;
+  --glass: rgba(255,255,255,0.04);
+  --hud-bg: rgba(10,20,30,0.6);
+  font-family: Inter, Roboto, Arial, sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body,#app{height:100%}
+body{
+  background: radial-gradient(ellipse at center, #071026 0%, #02040a 100%);
+  color:#e6f7ff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  min-height:100vh;
+}
+
+.hud{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 18px;
+  background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-bottom:1px solid rgba(255,255,255,0.03);
+  backdrop-filter: blur(6px);
+}
+
+.hud .stat{font-size:14px;color:var(--muted);margin-right:12px}
+.title{font-family:monospace;color:var(--neon);letter-spacing:2px;margin:0}
+
+.game-area{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:18px;
+  flex:1;
+}
+
+canvas{
+  background:linear-gradient(180deg,#041226 0%, #001018 100%);
+  border-radius:12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6), inset 0 0 40px rgba(0,255,255,0.02);
+  max-width:100%;
+  height:auto;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  pointer-events:none;
+}
+
+.overlay .panel{
+  pointer-events:auto;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border:1px solid rgba(255,255,255,0.04);
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
+  color:var(--neon);
+}
+
+.btn{
+  background:linear-gradient(90deg,var(--accent),#00f0ff);
+  color:#001;
+  border:none;
+  padding:10px 16px;
+  margin:8px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:700;
+}
+
+.btn.small{padding:6px 10px;font-size:14px}
+.hidden{display:none}
+
+.controls{
+  padding:12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+.control-grid{display:flex;align-items:center;gap:8px}
+.dir{
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.06);
+  color:var(--neon);
+  padding:10px 14px;
+  border-radius:8px;
+  font-size:18px;
+}
+
+.offline{padding:40px;text-align:center}
